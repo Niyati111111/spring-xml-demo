@@ -7,26 +7,39 @@
 
     <bean id="actor1" class="com.stackroute.domain.Actor">
 
-        <property name="name" value="Shirley Watson"></property>
-        <property name="gender" value="female"></property>
-        <property name="age" value="20"></property>
+        <constructor-arg name="name" value="Shirley Watson"></constructor-arg>
+        <constructor-arg name="gender" value="female"></constructor-arg>
+        <constructor-arg name="age" value="20"></constructor-arg>
 
     </bean>
 
     <bean id="actor2" class="com.stackroute.domain.Actor">
 
-        <property name="name" value="Tom Stuart"></property>
-        <property name="gender" value="male"></property>
-        <property name="age" value="18"></property>
+        <constructor-arg name="name" value="Tom Stuart"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
+        <constructor-arg name="age" value="18"></constructor-arg>
 
     </bean>
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor1"></property>
+
+    <bean id="actor3" class="com.stackroute.domain.Actor">
+
+        <constructor-arg name="name" value="Morris Wilson"></constructor-arg>
+        <constructor-arg name="gender" value="male"></constructor-arg>
+        <constructor-arg name="age" value="28"></constructor-arg>
+
+    </bean>
+
+    <bean name="MovieA, MovieB" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg name="actor" ref="actor1"></constructor-arg>
     </bean>
 
     <bean id="movie1" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor2"></property>
+        <constructor-arg name="actor" ref="actor2"></constructor-arg>
+    </bean>
+
+    <bean id="movie2" class="com.stackroute.domain.Movie">
+        <constructor-arg name="actor" ref="actor3"></constructor-arg>
     </bean>
 
 
