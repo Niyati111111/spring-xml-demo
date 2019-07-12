@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="customInit" default-destroy-method="customDestroy">
 
 
     <bean id="actor" class="com.stackroute.domain.Actor">
@@ -18,7 +18,7 @@
 
     </bean>
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType">
+    <bean id="BeanLifeCycle" class="com.stackroute.com.stackroute.demo.BeanLifeCycle" init-method="customInit" destroy-method="customDestroy">
 
     </bean>
 

@@ -10,8 +10,6 @@ public class Main {
         Movie movie = applicationContext.getBean("movie",Movie.class);
         System.out.println(movie.getActor());
 
-        Movie movie1 = applicationContext.getBean("movie1",Movie.class);
-        System.out.println(movie1.getActor());
 
     }
 }
